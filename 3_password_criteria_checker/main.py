@@ -1,13 +1,23 @@
 """
 3. Password Criteria Checker
     Write a Python program to check if a password meets the following criteria:
-        + At least 8 Character long
+        + At least 8 characters long
         + Contains at least one uppercase letter, one lowercase letter, one digit, and one special character (!, @, #, $, %, or &)
 """
 
 import  string
 
 def password_checker(password):
+    """Checks if a password fulfills the following criteria:
+        - At least 8 characters long.
+        - Contains at least one uppercase letter, one lowercase letter, one digit, and one special character (!, @, #, $, %, or &).
+
+    Args:
+        password (str): the password to check.
+
+    Returns:
+        str: "Is Valid!" if valid; "Not a valid password :(" if not.
+    """
 
     length_flag = len(password) >= 8
     upper_flag = lower_flag = digit_flag = special_flag = 0
