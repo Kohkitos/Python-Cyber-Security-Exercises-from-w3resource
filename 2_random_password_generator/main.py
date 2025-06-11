@@ -6,6 +6,16 @@ import secrets
 import string
 
 def password_generator(length=8):
+    """Generates a random password of the specified length, or 8 if the input is invalid or omitted. 
+    The password consists of a random selection of uppercase and lowercase letters, digits, and punctuation characters.
+
+    Args:
+        length (int, optional): Length of the password. Defaults to 8.
+
+    Returns:
+        str: the password generated.
+    """
+
     try:
         length = int(length)
     except ValueError:
