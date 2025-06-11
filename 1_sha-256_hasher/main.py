@@ -6,9 +6,22 @@
 import  hashlib
 
 def password_hasher_sha256(password):
-    # Create new hash object with sha256 algorithm
+    """Hashes a plaintext password using SHA-256.
+
+    Args:
+        password (str): The plaintext password to hash.
+
+    Raises:
+        TypeError: if the input is not a string.
+
+    Returns:
+        str: the SHA-256 hashed password represented as a hexadecimal string.
+    """
+
+    if not isinstance(password, str):
+        raise TypeError("Input must be a string")
+
     hasher = hashlib.sha256(password.encode())
-    # Save hashed password on a new string and return it
     hashed_pass = hasher.hexdigest()
     return hashed_pass
 
